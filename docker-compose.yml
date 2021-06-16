@@ -1,0 +1,12 @@
+version: '2'
+services:
+
+  graf:
+    image: grafana/grafana
+    ports:
+      - "80:3000"
+    environment:
+      - GF_INSTALL_PLUGINS=grafana-clock-panel
+        ,grafana-simple-json-datasource
+        ,flant-statusmap-panel
+        ,grafana-piechart-panel
